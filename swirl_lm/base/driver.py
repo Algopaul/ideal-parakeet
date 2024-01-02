@@ -593,7 +593,7 @@ def solver(
   # every core/device.
   state = driver_tpu.distribute_values(
       strategy,
-      value_fn=tf.function(init_fn),
+      value_fn=init_fn,
       logical_coordinates=logical_coordinates,
   )
 
